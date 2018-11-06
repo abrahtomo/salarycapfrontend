@@ -15,5 +15,6 @@ export class TeamService {
   setTeams(teams: Team[]) {
     this.teams = teams;
     this.teamChanged.next(this.teams.slice());
+    console.log(this.teams);
   }
 }
