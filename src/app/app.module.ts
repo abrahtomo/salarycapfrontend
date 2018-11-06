@@ -8,12 +8,14 @@ import { TeamListComponent } from './team-list/team-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DataService } from './shared/data.service';
 import { TeamService } from './team-list/team.service';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    TeamListComponent
+    TeamListComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
