@@ -15,6 +15,10 @@ export class TeamListComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
 
+  giveTeams() {
+    return this.teams;
+  }
+
   ngOnInit() {
     this.dataService.getTeams()
       .subscribe(

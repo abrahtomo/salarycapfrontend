@@ -1,10 +1,14 @@
 import {RouterModule, Routes} from '@angular/router';
-import {TeamListComponent} from './team-list/team-list.component';
 import {NgModule} from '@angular/core';
+
+import {TeamListComponent} from './team-list/team-list.component';
+import {PlayersByTeamComponent} from './players-by-team/players-by-team.component';
+
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/teams', pathMatch: 'full'},
-  {path: 'teams', component: TeamListComponent}
+  {path: 'teams', component: TeamListComponent},
+  {path: 'teams/:id', component: PlayersByTeamComponent}
 ];
 
 

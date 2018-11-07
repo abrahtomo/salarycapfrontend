@@ -9,18 +9,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { DataService } from './shared/data.service';
 import { TeamService } from './team-list/team.service';
 import { HeaderComponent } from './header/header.component';
+import { PlayersByTeamComponent } from './players-by-team/players-by-team.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     TeamListComponent,
-    HeaderComponent
+    HeaderComponent,
+    PlayersByTeamComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    HttpClientModule
   ],
   providers: [DataService, TeamService],
   bootstrap: [AppComponent]

@@ -1,14 +1,14 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Teams</th>
+      <th scope="col">Team</th>
       <th scope="col">Roster size</th>
       <th scope="col">Total caphit</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let team of teams" >
-      <th scope="row">{{team.name}}</th>
+      <th scope="row"><a routerLink="/teams/{{team.teamId}}"> {{team.name}}</a></th>
       <th>{{team.count}}/23</th>
       <th>{{team.sumOfCapHit}}$</th>
     </tr>
