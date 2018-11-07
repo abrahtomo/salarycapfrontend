@@ -10,7 +10,6 @@ import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class DataService {
-  players: PlayerByTeamModel[];
 
   constructor(private http: Http, private playersService: PlayersByTeamService, private httpClient: HttpClient) {
   }
