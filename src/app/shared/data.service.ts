@@ -2,15 +2,13 @@ import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import 'rxjs/Rx';
 
-import {TeamService} from '../team-list/team.service';
 import {Team} from './team.model';
 import {Observable} from 'rxjs';
 
 @Injectable()
 export class DataService {
 
-  constructor(private http: Http,
-              private teamService: TeamService) {
+  constructor(private http: Http) {
   }
 
   getTeams(): Observable<Team[]> {

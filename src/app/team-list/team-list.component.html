@@ -1,16 +1,16 @@
-<div class="row">
-  <div class="col-xs-10">
-   <table>
-     <tr>
-       <th>Teams</th>
-       <th>Roster size</th>
-       <th>Total caphit</th>
-     </tr>
-     <tr *ngFor="let team of teams" >
-       <th>{{team.name}}</th>
-       <th>{{team.count}}/23</th>
-       <th>{{team.sumOfCapHit}}$</th>
-     </tr>
-   </table>
-  </div>
-</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Teams</th>
+      <th scope="col">Roster size</th>
+      <th scope="col">Total caphit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let team of teams" >
+      <th scope="row">{{team.name}}</th>
+      <th>{{team.count}}/23</th>
+      <th>{{team.sumOfCapHit}}$</th>
+    </tr>
+  </tbody>
+</table>
