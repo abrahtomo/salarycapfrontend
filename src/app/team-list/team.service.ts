@@ -12,4 +12,9 @@ export class TeamService {
     this.teams = teams;
     this.teamChanged.next(this.teams.slice());
   }
+
+  getTeam(index: number) {
+    console.log(this.teams[index - 1]);
+    return this.teams[index - 1];
+  }
 }
