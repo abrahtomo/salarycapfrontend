@@ -6,15 +6,10 @@ import {Subject} from 'rxjs';
 export class TeamService {
   teamChanged = new Subject<Team[]>();
 
-  private teams: Team[];
-
-  getTeams() {
-    return this.teams.slice();
-  }
+  public teams: Team[] = [];
 
   setTeams(teams: Team[]) {
     this.teams = teams;
     this.teamChanged.next(this.teams.slice());
-    console.log(this.teams);
   }
 }
