@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import { Observable } from 'rxjs';
+import {Subscription} from 'rxjs';
 
 import {Team} from '../shared/team.model';
+import {TeamService} from './team.service';
 import {DataService} from '../shared/data.service';
 
 
@@ -12,17 +13,18 @@ import {DataService} from '../shared/data.service';
 })
 export class TeamListComponent implements OnInit {
   teams: Team[];
+  subscription: Subscription;
 
-  constructor(private dataService: DataService) { }
-
-  giveTeams() {
-    return this.teams;
-  }
+  constructor(private teamService: TeamService, private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getTeams()
+    this.dataService.getTeams();
+    this.subscription = this.teamService.teamChanged
       .subscribe(
-        teams => this.teams = teams
+        (teams: Team[]) => {
+          this.teams = teams;
+        }
       );
+    this.teams = this.teamService.teams;
   }
 }

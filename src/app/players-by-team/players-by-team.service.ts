@@ -8,10 +8,10 @@ import {Injectable} from '@angular/core';
 export class PlayersByTeamService {
   playersChanged = new Subject<PlayerByTeamModel[]>();
 
-  public palyers: PlayerByTeamModel[] = [];
+  public players: PlayerByTeamModel[] = [];
 
-  setPalyers(players: PlayerByTeamModel[]) {
-    this.palyers = players;
-    this.playersChanged.next(this.palyers.slice());
+  setPlayers(players: PlayerByTeamModel[]) {
+    this.players = players;
+    this.playersChanged.next(this.players.slice());
   }
 }
