@@ -7,7 +7,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let team of teams" >
+    <tr *ngFor="let team of teams | orderBy: 'sumOfCapHit':true" >
       <th scope="row"><a routerLink="/teams/{{team.teamId}}"> {{team.name}}</a></th>
       <th>{{team.count}}/23</th>
       <th>{{team.sumOfCapHit}}$</th>

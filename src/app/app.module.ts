@@ -11,6 +11,7 @@ import { TeamService } from './team-list/team.service';
 import { HeaderComponent } from './header/header.component';
 import { PlayersByTeamComponent } from './players-by-team/players-by-team.component';
 import {HttpClientModule} from '@angular/common/http';
+import {OrderModule} from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    OrderModule
   ],
   providers: [DataService, TeamService],
   bootstrap: [AppComponent]

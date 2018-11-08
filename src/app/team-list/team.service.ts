@@ -14,7 +14,6 @@ export class TeamService {
   }
 
   getTeam(index: number) {
-    console.log(this.teams[index - 1]);
     return this.teams[index - 1];
   }
 }
