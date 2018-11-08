@@ -32,15 +32,12 @@ export class DataService {
   getPlayersByTeam(id: number) {
     this.httpClient.get<PlayerByTeamModel[]>('http://localhost:8080/teams/' + id)
       .map((players) => {
-        console.log(id);
-        console.log(players);
         return players;
       }
       )
       .subscribe(
         (players: PlayerByTeamModel[]) => {
          this.playersService.setPlayers(players);
-         console.log(this.playersService.players);
         }
       );
   }
